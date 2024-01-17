@@ -45,7 +45,20 @@ chmod +x scriptcreatorscript.sh
 ```
 mv yourscriptname.sh /your/path/to/the/files
 ```
+
 ## Alternatively you can create the final script via copy paste from the "convert.sh" Script
 
-Just create a script locally, copy paste the script and put in you activation_bytes.
-Don't forget to make it executable.
+#### Just create a script locally, copy paste the script and put in you activation_bytes:
+
+```
+for file in *.aax; do
+  ffmpeg -activation_bytes 12345678 -i "$file" -c copy "${file%.aax}.m4b"
+  rm "$file"
+done
+```
+
+#### Don't forget to make it executable:
+
+```
+chmod +x yourscript.sh
+```
