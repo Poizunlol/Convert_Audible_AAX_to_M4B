@@ -6,7 +6,10 @@ The Script Generator Script will create a personalized Script to Process all you
 
 ## Requirements
 This Script Requires FFMPEG to be installed on your host.
-To clone the repositroy you need GIT. Alternatively to the Manual Script setup below!
+
+To clone the repositroy you need GIT. 
+
+Alternatively do the manual Script setup below!
 
 ##### The following only needs to be done once to retrieve your activation_bytes if you don't have them:
 
