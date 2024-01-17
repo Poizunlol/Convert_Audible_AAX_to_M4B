@@ -45,3 +45,7 @@ chmod +x scriptcreatorscript.sh
 ```
 mv yourscriptname.sh /your/path/to/the/files
 ```
+## Alternatively you can create the final scirpt via copy paste from the "convert.sh" Script
+
+Just creat a scirpt locally, copy paste the script and put in you activation_bytes.
+Don't forget to make it executable.
