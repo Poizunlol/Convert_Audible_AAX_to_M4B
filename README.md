@@ -62,3 +62,9 @@ done
 ```
 chmod +x yourscript.sh
 ```
+
+#### Execute Script
+
+```
+.yourscript.sh
+```
