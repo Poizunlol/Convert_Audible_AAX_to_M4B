@@ -1,13 +1,13 @@
 ## About
-Script to Process all your AAX Files from Audible in a Folder with ffmpeg. 
+The Script Generator Script will creat a personalized Script to Process all your AAX Files from Audible in a Folder with ffmpeg. 
  - This script will convert them to M4B Files.
  - It will keep the original Filename, Meta Data, Images and Chapters contained in the AAX File.
  - It will delete the AAX Files once processed.
 
 ## Requirements
-This Script Requries FFMPEG to be installed on your host.
+This Script Requries FFMPEG, Git to be installed on your host.
 
-##### The following only need to be done once:
+##### The following only need to be done once to retrieve your activation_bytes if you don't have them:
 This Script also requires your personal Activation Bytes to decript you Files. 
 
 To retriev you activation Bytes you can use the Following repostiroy --> https://github.com/inAudible-NG/tables
@@ -16,53 +16,32 @@ I followed along the following Video -> https://www.youtube.com/watch?v=4bB6phEt
 
 ## Usage on Linux
 
-##### Create the Script File with the text editor of you choice:
-```
-vi conversion.sh
-```
-##### Copy the Script, change the activation_bytes "12345678" that you have extracted with "github.com/inAudible-NG/tables" : 
-```
-for file in *.aax; do
-  ffmpeg -activation_bytes 12345678 -i "$file" -c copy "${file%.aax}.m4b"
-  rm "$file"
-done
-```
-##### Make script executable
-```
-chmod +x conversion.sh
-```
-##### Execute the script
-```
-./conversion.sh
-```
-## Automated Script to creat an executable Script on your System
-```
-#!/bin/bash
+##### Clone the Repository
 
-# Ask for script filename
-echo -n "Enter the script filename (e.g., create_m4b_files.sh): "
-read call_script
+```
+git clone https://github.com/Poizunlol/Convert_Audible_AAX_to_M4B
+```
 
-# Ask for activation bytes
-echo -n "Enter activation_bytes: "
-read activation_bytes
+#### Go to Folder "Convert_Audible_AAX_to_M4B"
 
-# Create a new script file
-script_filename="$call_script"
-touch "$script_filename"
+```
+cd Convert_Audible_AAX_to_M4B/
+```
 
-# Write the script contents to the new file
-echo "#!/bin/bash" >> "$script_filename"
-echo "
-for file in *.aax; do
-  ffmpeg -activation_bytes \"$activation_bytes\" -i \"$file\" -c copy \"${file%.aax}.m4b\"
-  rm \"$file\"
-done" >> "$script_filename"
+#### Make Script Executable
 
-# Make the new script executable
-chmod +x "$script_filename"
+```
+chmod +x scriptcreatorscript.sh
+```
 
-# Inform the user
-echo "A new script named '$script_filename' has been created and made executable. You can now run it using the following command:"
-echo "$call_script"
+#### Execute Script
+
+```
+.scriptcreatorscript.sh
+```
+
+#### Move the finished Script to the location of aax Files
+
+```
+mv yourscriptname.sh /your/path/to/the/files
 ```
