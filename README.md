@@ -1,5 +1,5 @@
 ## About
-Script to Process all your AAX Files from Audible in a Folder. 
+Script to Process all your AAX Files from Audible in a Folder with ffmpeg. 
  - This script will convert them to M4B Files.
  - It will keep the original Filename, Meta Data, Images and Chapters contained in the AAX File.
  - It will delete the AAX Files once processed.
