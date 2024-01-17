@@ -5,13 +5,16 @@ The Script Generator Script will create a personalized Script to Process all you
  - It will delete the AAX Files once processed.
 
 ## Requirements
-This Script Requires FFMPEG, Git to be installed on your host.
+This Script Requires FFMPEG to be installed on your host.
+To clone the repositroy you need GIT. Alternatively to the Manual Script setup below!
 
-##### The following only need to be done once to retrieve your activation_bytes if you don't have them:
+##### The following only needs to be done once to retrieve your activation_bytes if you don't have them:
+
 This Script also requires your personal Activation Bytes to decrypt you Files. 
 
 To retrieve you activation Bytes you can use the Following repository --> https://github.com/inAudible-NG/tables
 
+##### Optional
 I followed along the following Video -> https://www.youtube.com/watch?v=4bB6phEtDFI
 
 ## Usage on Linux
